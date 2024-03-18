@@ -77,17 +77,12 @@
 
     <main class="bg-secondary">
            
-        <div class="container">
-            <h3 class="mt-5 fs-4 text-center">Ingresar tiempo desde donde empezará a decrementar el contador:</h3>
-            <div class="mt-5">
-              <input type="number" id="numberInput" class="form-control ">
-            </div>
-            <div class="bg-dark mt-5 text-white pt-5 pb-5 text-center">Horas : Minutos : Segundos : Centesimos </div>
-            <div class="row col-12 container justify-content-center responsive ">
-                <button class="btn btn-danger col-3 m-2 ">Iniciar</button>
-                <button class="btn btn-danger col-3 m-2 ">Resetear</button>
-                <button class="btn btn-danger col-3 m-2 ">Pausar</button>
-            </div>
+        <div class="container text-center mt-5">
+          <input class="mb-3" type="number" id="tiempoInicial" placeholder="Ingrese tiempo en segundos"> <br>
+          <button class="btn btn-success m-2" onclick="iniciarTemporizador()">Iniciar</button>
+          <button class="btn btn-primary m-2" onclick="pausarTemporizador()">Pausar</button>
+          <button class="btn btn-danger m-2" onclick="resetearTemporizador()">Reset</button>
+          <div class="fs-1" id="temporizador">00:00:00</div>
         </div>
            
     </main>
@@ -95,10 +90,13 @@
     <footer class="text-center bg-primary-subtle py-3">
         <p>&copy; Todos los derechos reservados</p>
       </footer>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/logica.js"></script>
+
   </body>
 </html>
